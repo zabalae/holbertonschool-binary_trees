@@ -8,7 +8,7 @@
  * if no common ancestor is found, return NULL
  */
 
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, 
+binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
 {
 	const binary_tree_t *first_copy = first;
