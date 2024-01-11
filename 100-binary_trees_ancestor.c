@@ -11,20 +11,4 @@
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 		const binary_tree_t *second)
 {
-	const binary_tree_t *first_copy = first;
-	const binary_tree_t *second_copy = second;
-
-	if (first == NULL || second == NULL)
-	{
-		return (NULL);
-	}
-
-	while (first_copy != second_cooy)
-	{
-		first_copy = (first_copy) ? first_copy->parent : second;
-
-		second_copy = (second_copy) ? second_copy->parent : second;
-	}
-
-	return ((binary_tree_t *)first_copy);
 }
