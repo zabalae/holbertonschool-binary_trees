@@ -29,7 +29,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 
 	if (ancestor1 == second || !ancestor2)
 	{
-		return (binary_trees_ancestor(second, ancestor1);)
+		return (binary_trees_ancestor(second, ancestor1));
 	}
 
 	return (binary_trees_ancestor(ancestor1, ancestor2));
