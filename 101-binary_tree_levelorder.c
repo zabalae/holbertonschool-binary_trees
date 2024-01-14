@@ -29,7 +29,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		if (current->left != NULL)
 		{
 			if (left_node == NULL)
-				return;
+				break;
 			left_node->node = current->left;
 			left_node->next = NULL;
 			rear->next = left_node;
@@ -38,12 +38,18 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 		if (current->right != NULL)
 		{
 			if (right_node == NULL)
-				return;
+				break;
 			right_node->node = current->right;
 			right_node->next = NULL;
 			rear->next = right_node;
 			rear = right_node;
 		}
+		temp = front;
+		front = front->next;
+		free(temp);
+	}
+	while (front != NULL)
+	{
 		temp = front;
 		front = front->next;
 		free(temp);
